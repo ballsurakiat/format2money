@@ -1,0 +1,30 @@
+{
+  "name": "format2money",
+  "version": "1.0.0",
+  "description": "convert number format to money format library for javascript or typrscript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ballsurakiat/format2money.git"
+  },
+  "keywords": [
+    "convert",
+    "number",
+    "to",
+    "money",
+    "format"
+  ],
+  "author": "ballsurakiat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ballsurakiat/format2money/issues"
+  },
+  "homepage": "https://github.com/ballsurakiat/format2money#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
