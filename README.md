@@ -19,10 +19,24 @@ console.log(result) //฿1,695,000.00
 ```
 
 # Option
-| Field | Type | Description |
-| ------ | ------ | ------ |
-| local | (String) | Currency code 3 character (Ex. USD, EUR, THB, JPY, RUB, GBP) |
-| toFixed | (Number) | 0-10 for decimal places |
+| Field | Type | Default | Description |
+| ------ | ------ | ------ | ------ |
+| local | (String) | null | Currency code 3 character (Ex. USD, EUR, THB, JPY, RUB, GBP, ...*(see in Currency Code List below)*) |
+| toFixed | (Number | String) | 0 | 0-10 for decimal places |
+
+# Currency Code List
+1. USD
+2. THB
+3. EUR
+4. JPY
+5. RUB
+6. GBP
+7. CAD
+8. CHF
+9. CNY
+10. HKD
+
+*(Update current code at December 14, 2020)*
 
 # License
 This project is licensed under the MIT License - see the [license](https://github.com/ballsurakiat/format2money/blob/main/LICENSE) file for details.

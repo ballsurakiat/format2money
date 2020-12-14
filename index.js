@@ -1,31 +1,48 @@
 const formate2money = {
     format: (number, option) => {
-        let prefix = getPrefixSymbol(option.local)
-        if (!number) {
-            return null
-        } else {
-            return prefix+String(parseInt(number).toLocaleString(undefined, {minimumFractionDigits: option.toFixed || 0})) //.toFixed(option.toFixed || 2)
+        try {
+            let decimal = typeof option == 'undefined' ? '' : option.decimal
+            let local = typeof option == 'undefined' ? '' : option.local
+            if (!number) {
+                return null
+            } else if (parseInt(decimal) >= 11) {
+                return null
+            } else {
+                return getPrefixSymbol(typeof local == 'undefined' ? '' : local, String(parseInt(number).toLocaleString(undefined, { minimumFractionDigits: decimal })))
+            }
+        } catch (error) {
+            if (error) {
+                return null
+            }
         }
     }
 }
 
 module.exports = formate2money
 
-const getPrefixSymbol = (local) => {
+const getPrefixSymbol = (local, number) => {
     switch (local) {
         case 'THB':
-            return '฿';
+            return number + '฿';
         case 'USD':
-            return '$';
+            return '$' + number;
         case 'EUR':
-            return '€';
+            return '€' + number;
         case 'JPY':
-            return '¥';
+            return '¥' + number;
         case 'RUB':
-            return '₽';
+            return number + '₽';
         case 'GBP':
-            return '£';
+            return '£' + number;
+        case 'CAD':
+            return 'C$' + number
+        case 'CHF':
+            return number + 'CHf'
+        case 'CNY':
+            return '¥' + number
+        case 'HKD':
+            return 'HK$' + number
         default:
-            return '';
+            return number;
     }
 }
