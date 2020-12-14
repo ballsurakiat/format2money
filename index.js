@@ -4,8 +4,7 @@ const formate2money = {
         if (!number) {
             return null
         } else {
-            number = prefix+String(parseInt(number).toLocaleString()) //.toFixed(option.toFixed || 2)
-            return number
+            return prefix+String(parseInt(number).toLocaleString(undefined, {minimumFractionDigits: option.toFixed || 0})) //.toFixed(option.toFixed || 2)
         }
     }
 }
