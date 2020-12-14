@@ -1,6 +1,6 @@
 {
   "name": "format2money",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "convert number format to money format library for javascript or typrscript.",
   "main": "index.js",
   "scripts": {
