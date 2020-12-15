@@ -12,7 +12,7 @@ $ npm install format2money # or yarn add format2money
 import format2money from 'format2money'
 let option = {
    local: 'THB',
-   toFixed: 2
+   decimal: 2
 }
 let result = format2money.format(1695000, option)
 console.log(result) //1,695,000.00฿
@@ -22,7 +22,7 @@ console.log(result) //1,695,000.00฿
 | Field | Type | Default | Description |
 | ------ | ------ | ------ | ------ |
 | local | String | null | Currency code 3 character (Ex. USD, EUR, THB, JPY, RUB, GBP, ...*(see in Currency Code List below)*) |
-| toFixed | Number or String | 0 | 0-10 for decimal places |
+| decimal | Number or String | 0 | 0-10 for decimal places |
 
 ### Currency Code List
 1. USD
